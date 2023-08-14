@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+}
+
+.title{
+    margin: 20px 0px;
+    background-color: rgb(221, 221, 221);
+}
+
+.main{
+    border: 8px solid rgb(184, 184, 184);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.name{
+    display: flex;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 8px 16px;
+    color: #7e7e7e;
+    background-color: rgb(221, 221, 221);
+}
+
+.name>span{
+    color: #bbb;
+}
+
+.name-input{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #7e7e7e;
+    flex-grow: 1;
+    border: none;
+    margin: 0px 12px;
+    outline: none;
+    background-color: rgb(221, 221, 221);
+}
+
+.message-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    /* width: 31.5vw; */
+    height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message-left, .message-right{
+    list-style: none;
+    padding: 8px 12px;
+    margin: 12px;
+    max-width: 20vw;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.message-left{
+    border-radius: 20px 20px 20px 0px;
+    align-self: flex-start;
+    background-color: #fff;
+    box-shadow: -5px 5px 5px #dcdcdc;
+}
+.message-right{
+    border-radius: 20px 20px 0px 20px;
+    align-self: flex-end;
+    background-color: #2d2d2d;
+    color: #fff;
+    box-shadow: 5px 5px 5px #dcdcdc;
+}
+.message-feedback{
+    font-style: italic;
+    align-self: center;
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.message-left>p>span, .message-right>p>span{
+    display: block;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.message-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 31vw; */
+}
+
+.message-input{
+    color: #505050;
+    flex-grow: 1;
+    height: 48px;
+    font-size: 15px;
+    border: 0px solid #f6f6f6;
+    outline: none;
+    padding: 0px 12px;
+    background-color: #e2e2e2;
+    border-radius: 0px 10px 0px 0px;
+}
+
+.send-button{
+    font-size: 15px;
+    color: #505050;
+    margin: 0;
+    border: 0px solid #f6f6f6;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #e2e2e2;
+    width: 73px;
+}
+
+.v-divider{
+    width: 1px;
+}
+
+::placeholder {
+    color: #505050;
+    font-style: italic;
+}
+
+.clients-total{
+    margin-top: 8px;
+}

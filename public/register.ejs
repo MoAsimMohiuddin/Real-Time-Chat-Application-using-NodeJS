@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Barlow:wght@200&family=Inconsolata&family=Karla:ital,wght@0,700;1,300&family=Nanum+Gothic&family=Ysabeau+Office:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="whole-container">
+        <form action="/register" method="post" class="form-container">
+            <div class="firstName">
+                <label for="firstName"><span>First Name</span></label><br>
+                <input type="text" name="firstNameInput" class="firstName" id="firstName" placeholder="Enter your First Name" required>
+            </div>
+            <div class="lastName">
+                <label for="lastName"><span>Last Name</span></label><br>
+                <input type="text" name="lastNameInput" class="lastName" id="lastName" placeholder="Enter your Last Name" required>
+            </div>
+            <div class="email">
+                <label for="email"><span>Email</span></label><br>
+                <input type="email" name="emailInput" class="email" id="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="password">
+                <label for="password"><span>Password</span></label><br>
+                <input type="password" name="passwordInput" class="password" id="password" placeholder="Enter your Password" required>
+            </div>
+    
+            <div class="genderContainer">
+                <label for="Gender"><span>Gender</span></label><br>
+                <select id="gender" class="gender" name="genderInput" required>
+                    <option class="genderInput" value="male"><span>Male</span></option>
+                    <option class="genderInput" value="male"><span>Female</span></option>
+                </select>
+            </div>
+    
+            <div class="submitButton">
+                <input type="submit" class="submit" value="Submit">
+            </div>
+
+            <%if(locals.existing){%>
+                <p>
+                    <%=existing%>
+                </p>
+            <%}%>
+        </form>
+
+        <div class="remainingContainer">
+            <div class="heading">
+                <a href="/login">Already a User? Click to Login</a>
+            </div>
+            <div class="icon">
+                <span class="icon">💬</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
